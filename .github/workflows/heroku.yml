@@ -1,0 +1,25 @@
+name: Manually Deploy to heroku
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: 4f5c746e-6666-4bba-8a4b-812e69dbde2a
+          heroku_app_name: jdtguploading
+          heroku_email: itsflmorse@protonmail.com
+          usedocker: true
+          docker_heroku_process_type: worker
+          stack: "container"
+          region: "us"
+        env:
+          API_HASH: b1fc05cb6e99b67c6fca96538c6d7e7e
+          APP_ID: 1957706
+          AUTH_USERS: 831054990
+          CHUNK_SIZE: 128
+          TG_BOT_TOKEN: 2047959538:AAFUVn1Vks1O8WfYcwE8UzbYFdrFZlwCTtU
+          WEBHOOK: ANYTHING
